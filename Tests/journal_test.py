@@ -1,5 +1,4 @@
 
-import pytest
 from Controller.journal.get_token_from_curl import get_data_from_curl
 
 bash_curl = """

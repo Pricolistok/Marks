@@ -1,12 +1,11 @@
 import requests
+from .constants import MARKS_LINK, ACADEMIC_YEAR
 
-from constants import MARKS_LINK, ACADEMIC_YEAR
 
-
-def get_marks(token: str, student_id) -> dict:
+def get_marks(token: str, student_id, academic_year=ACADEMIC_YEAR) -> list:
     params = {
         "student_profile_id": student_id,
-        "academic_year_id": ACADEMIC_YEAR
+        "academic_year_id": academic_year
     }
     headers = {
         "auth-token": token
@@ -16,4 +15,4 @@ def get_marks(token: str, student_id) -> dict:
     if response.status_code == 200:
         return response.json()
     else:
-        return {}
+        return []
