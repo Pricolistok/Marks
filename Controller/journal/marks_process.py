@@ -1,5 +1,3 @@
-from Marks.Controller.journal.get_average import get_averages
-from Marks.Controller.journal.get_marks import get_marks
 
 
 def get_all_marks(marks: dict) -> dict:

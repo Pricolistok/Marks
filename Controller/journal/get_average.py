@@ -1,7 +1,9 @@
 
 
 def get_average(numbers: list[int]) -> float:
-    return round(sum(numbers) / len(numbers), 2)
+    if len(numbers) >= 1:
+        return round(sum(numbers) / len(numbers), 2)
+    return 0.0
 
 
 def get_averages(subjects: dict) -> dict:
